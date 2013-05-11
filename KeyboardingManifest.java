@@ -40,7 +40,7 @@ public class KeyboardingManifest extends JFrame implements KeyListener{
     }
     
     public void keyTyped(KeyEvent event){
-        line1 = String.format("Key typed: %s", KeyEvent.getKeyChar());
+        line1 = String.format("Key typed: %s", event.getKeyChar());
         setLines2and3(event);
     }
     private void setLines2and3(KeyEvent event){
