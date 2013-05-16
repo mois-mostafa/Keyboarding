@@ -1,6 +1,6 @@
 JPATH = src/keyboarding/
-CPATH = classes/keyboarding/
-JFLAGS = -g -d classes -cp classes
+CPATH = build/keyboarding/
+JFLAGS = -g -d build -cp classes
 JC = javac
 JVM = java
 
@@ -19,7 +19,7 @@ MAIN = Main
 default: classes
 
 run: classes
-	$(JVM) -cp classes keyboarding.Keyboarding
+	$(JVM) -cp build keyboarding.Keyboarding
 
 classes: $(CLASSES:.java=.class)
 
