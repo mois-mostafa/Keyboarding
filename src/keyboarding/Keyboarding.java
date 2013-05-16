@@ -4,7 +4,8 @@
  */
 package keyboarding;
 
-
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.JFrame;
 
 /**
@@ -18,16 +19,22 @@ public class Keyboarding {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        Dimension screenResolution = Toolkit.getDefaultToolkit().getScreenSize();
         
         KeyboardingManifest keyDemoFrame = new KeyboardingManifest();
         keyDemoFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        keyDemoFrame.setSize(350,100);
+        keyDemoFrame.setSize(350,200);
+        keyDemoFrame.setLocation(screenResolution.width/2-keyDemoFrame.getSize().width/2, screenResolution.height/6);
         keyDemoFrame.setVisible(true);
         
-        keyboardLayoutFrame keyboardLayout = new keyboardLayoutFrame();
+        KeyboardLayoutFrame keyboardLayout = new KeyboardLayoutFrame();
         keyboardLayout.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        keyboardLayout.setSize(600,600);
+        keyboardLayout.setSize(800,300);
+        keyboardLayout.setLocation(screenResolution.width/2-keyboardLayout.getSize().width/2, screenResolution.height/2);
         keyboardLayout.setVisible(true);
-        
+
+        System.out.println(System.currentTimeMillis()/1000000);
+
     }
 }
