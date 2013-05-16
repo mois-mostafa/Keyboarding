@@ -12,13 +12,13 @@ JVM = java
 CLASSES = \
   $(JPATH)Keyboarding.java \
   $(JPATH)KeyboardingManifest.java \
-  $(JPATH)keyboardLayoutFrame.java
+  $(JPATH)KeyboardLayoutFrame.java
 
 MAIN = Main
 
 default: classes
 
-run:
+run: classes
 	$(JVM) -cp classes keyboarding.Keyboarding
 
 classes: $(CLASSES:.java=.class)
