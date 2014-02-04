@@ -99,6 +99,7 @@ public class KeyboardingManifest extends JFrame implements KeyListener{
         float time = (time2 - time1)/1000;
         line4 = String.format("Time = %s", Float.toString(time)); 
         textArea.append(line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n");
+        textArea.append("-------------------------\n");
         textArea.setCaretPosition(textArea.getDocument().getLength());
     }
     
